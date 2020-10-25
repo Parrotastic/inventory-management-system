@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainScreenController">
+   <children>
+      <Label layoutX="38.0" layoutY="14.0" prefHeight="28.0" prefWidth="202.0" text="Inventory Management System">
+         <font>
+            <Font name="Courier New Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox alignment="BOTTOM_LEFT" layoutX="38.0" layoutY="172.0" prefHeight="110.0" prefWidth="330.0" />
+      <TableView fx:id="productTblView" layoutX="427.0" layoutY="139.0" prefHeight="122.0" prefWidth="330.0">
+         <columns>
+            <TableColumn fx:id="prodIdCol" prefWidth="75.0" text="Prod. ID" />
+            <TableColumn fx:id="prodNameCol" prefWidth="83.20001220703125" text="Prod. Name" />
+            <TableColumn fx:id="prodInvLvlCol" prefWidth="85.60003662109375" text="Inv. Level" />
+            <TableColumn fx:id="prodpricePerUnitCol" prefWidth="86.39996337890625" text="Price per Unit" />
+         </columns>
+      </TableView>
+      <Label layoutX="38.0" layoutY="58.0" text="Parts">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="427.0" layoutY="58.0" text="Products">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="partSearchBtn" layoutX="139.0" layoutY="87.0" mnemonicParsing="false" onAction="#onActionSearchPart" text="Search" />
+      <Button fx:id="productSearchBtn" layoutX="540.0" layoutY="87.0" mnemonicParsing="false" onAction="#onActionSearchProduct" text="Search" />
+      <TextField fx:id="partSearchbox" layoutX="210.0" layoutY="87.0" prefHeight="26.0" prefWidth="151.0" />
+      <TextField fx:id="productSearchbox" layoutX="603.0" layoutY="87.0" prefHeight="26.0" prefWidth="151.0" />
+      <Button fx:id="exitBtn" layoutX="670.0" layoutY="347.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="26.0" prefWidth="87.0" text="Exit">
+         <font>
+            <Font name="Courier New Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="addPartBtn" layoutX="185.0" layoutY="273.0" mnemonicParsing="false" onAction="#onActionAddPart" prefHeight="26.0" prefWidth="50.0" text="Add" />
+      <Button fx:id="modPartBtn" layoutX="249.0" layoutY="274.0" mnemonicParsing="false" onAction="#onActionModPart" text="Modify" />
+      <Button fx:id="delPartBtn" layoutX="317.0" layoutY="274.0" mnemonicParsing="false" onAction="#onActionDelPart" text="Delete" />
+      <Button fx:id="addProductBtn" layoutX="577.0" layoutY="274.0" mnemonicParsing="false" onAction="#onActionAddProduct" prefHeight="26.0" prefWidth="50.0" text="Add" />
+      <Button fx:id="delProductBtn" layoutX="706.0" layoutY="274.0" mnemonicParsing="false" onAction="#onActionDelProduct" text="Delete" />
+      <Button fx:id="modProductBtn" layoutX="643.0" layoutY="274.0" mnemonicParsing="false" onAction="#onActionModProduct" text="Modify" />
+      <Separator layoutX="397.0" layoutY="100.0" orientation="VERTICAL" prefHeight="200.0" />
+      <TableView fx:id="partTblView" layoutX="45.0" layoutY="139.0" prefHeight="122.0" prefWidth="330.0">
+        <columns>
+          <TableColumn fx:id="partIdCol" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="partNameCol" prefWidth="83.20001220703125" text="Part Name" />
+            <TableColumn fx:id="invLvlCol" prefWidth="85.60003662109375" text="Inv. Level" />
+            <TableColumn fx:id="priceperUnitCol" prefWidth="83.99997558593748" text="Price per Unit" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
