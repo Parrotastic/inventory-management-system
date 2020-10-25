@@ -2,7 +2,7 @@
 <jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PartsInventorySystem.jnlp">
   <information>
     <title>PartsInventorySystem</title>
-    <vendor>Luka</vendor>
+    <vendor>Parrotastic</vendor>
     <description>null</description>
     <offline-allowed/>
   </information>
